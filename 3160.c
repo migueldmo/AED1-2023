@@ -1,5 +1,7 @@
 /*Problema 3160 Beecrowd
-Autor: Miguel de Moura Oliveira - Disciplina: Algorítmo e Estruras de Dados 1*/
+Autor: Miguel de Moura Oliveira
+Disciplina: Algoritmos e Estruras de Dados 1
+*/
 
 #include <stdio.h>
 #include <stdlib.h>

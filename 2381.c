@@ -11,7 +11,7 @@ typedef struct elemento
 {
     char nome[MAX];
     struct elemento *prox; 
-} Tipoelemento;
+}Tipoelemento;
 
 typedef struct Lista
 {

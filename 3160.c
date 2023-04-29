@@ -15,6 +15,7 @@ struct elemento
     struct elemento *prox;
 };
 typedef struct elemento tipoElemento;
+
 struct Lista
 {
     tipoElemento *primeiro, *ultimo;

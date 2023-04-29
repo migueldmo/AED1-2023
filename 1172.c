@@ -23,4 +23,6 @@ int main(){
     for(i = 0; i < 10; i++)
         scanf("%d", &v[i]);
     busca_subs(v);
+    
+    return 0;
 }

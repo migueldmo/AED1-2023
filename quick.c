@@ -1,3 +1,6 @@
+/*Autor: Miguel de Moura Oliveira
+/*EP05 - AED1
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

@@ -11,7 +11,7 @@ typedef struct elemento
 {
     char nome[MAX];
     struct elemento *prox; 
-}Tipoelemento;
+} Tipoelemento;
 
 typedef struct Lista
 {
@@ -87,6 +87,22 @@ char* busca(TipoLista *aux, int x){
     }
     return p->nome;
 }
+/*O procedimento abaixo recebe uma lista e desaloca seus elementos*/
+void libera(TipoLista *aux){
+    Tipoelemento *p, *q;
+    p = aux->primeiro;
+
+    if(aux->t == 0)
+        free(p);
+    else{
+        while(p->prox != NULL){
+            q = p;
+            p = p->prox;
+            free(q);
+        }
+        free(p);
+    }
+}
 
 int main(){
     TipoLista Minhalista;
@@ -103,6 +119,8 @@ int main(){
     }
 
     printf("%s\n", busca(&Minhalista, num));
-
+    
+    libera(&Minhalista);
+    
     return 0;
 }

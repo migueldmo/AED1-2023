@@ -28,7 +28,7 @@ int main(){
     double total;
 
     srand(time(NULL));
-
+    /*geração de um vetor com valores aleatórios*/
     for(i= 0; i < TAM; i++){
         v[i] = rand() % 10000;
     }

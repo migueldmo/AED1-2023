@@ -1,7 +1,5 @@
 /*Problema 3160 Beecrowd
-Autor: Miguel de Moura Oliveira
-Disciplina: Algoritmos e Estruras de Dados 1
-*/
+Autor: Miguel de Moura Oliveira - Disciplina: Algorítmo e Estruras de Dados 1*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,7 +13,6 @@ struct elemento
     struct elemento *prox;
 };
 typedef struct elemento tipoElemento;
-
 struct Lista
 {
     tipoElemento *primeiro, *ultimo;
@@ -92,6 +89,22 @@ void compara(tipoLista *Lista1,tipoLista *Lista2, tipoLista *Lista3){
     }       
 }
 
+/*O procedimento abaixo recebe uma lista e desaloca seus elementos*/
+void libera(TipoLista *aux){
+    Tipoelemento *p, *q;
+    p = aux->primeiro;
+
+    if(aux->t == 0)
+        free(p);
+    else{
+        while(p->prox != NULL){
+            q = p;
+            p = p->prox;
+            free(q);
+        }
+        free(p);
+    }
+}
 int main(){
     tipoElemento *comp;
     char n1[MAX],n2[MAX], n3[MAX];
@@ -124,6 +137,10 @@ int main(){
     compara(&MinhaLista,&MinhaLista2, &MinhaLista3);
 
     imprime(&MinhaLista);
+
+    libera(&MinhaLista);
+    libera(&MinhaLista2);
+    libera(&MinhaLista3);
 
     return 0;
 }

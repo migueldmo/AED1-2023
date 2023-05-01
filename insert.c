@@ -6,10 +6,6 @@
 #include <time.h>
 #define TAM 5000 /*tamanho do vetor desejado (n). Para testar com outros parâmetros, basta alterar o valor desta variável global*/
 
-/*A função abaixo recebe um vetor v[p,...,r], com p <= r. Rearranja os
-elementos do vetor e devolve j em p,..,r tal que v[p,...,j-1] <= v[j] < v[j+1,...,r].
-*/
-
 /*O procedimento abaixo recebe um inteiro n e um vetor v[0,...,n-1] e rearranja-o
 em ordem crescente.*/
 void insert(int n, int v[]){

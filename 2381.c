@@ -92,7 +92,7 @@ void libera(TipoLista *aux){
     Tipoelemento *p, *q;
     p = aux->primeiro;
 
-    if(aux->t == 0)
+    if(aux->t == 1)
         free(p);
     else{
         while(p->prox != NULL){

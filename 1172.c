@@ -4,6 +4,7 @@ Autor: Miguel de Moura Oliveira
 #include <stdio.h>
 #include <stdlib.h>
 
+/*O procedimento abaixo recebe um vetor v[0,...,9] e susbtiui por 1 o elemento v[k] que é igual à 0*/
 void busca_subs(int v[]){
     int k, *p;
     for(k = 0;k < 10; k++){

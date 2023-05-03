@@ -94,7 +94,7 @@ void libera(TipoLista *aux){
     Tipoelemento *p, *q;
     p = aux->primeiro;
 
-    if(aux->t == 0)
+    if(aux->t == 1)
         free(p);
     else{
         while(p->prox != NULL){
@@ -105,6 +105,7 @@ void libera(TipoLista *aux){
         free(p);
     }
 }
+
 int main(){
     tipoElemento *comp;
     char n1[MAX],n2[MAX], n3[MAX];

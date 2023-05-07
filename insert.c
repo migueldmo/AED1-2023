@@ -32,7 +32,7 @@ int main(){
         v[i] = rand() % 10000;
     }
     antes = clock();
-    insert(TAM-1, v);
+    insert(TAM, v);
     depois = clock();
 
     total = (double)(depois-antes)/CLOCKS_PER_SEC;

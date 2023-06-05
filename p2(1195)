@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct aux {
+  int chave;
+  struct aux *esq, *dir;
+} No;
+
+typedef No *PONT;
+
+PONT inicializa() { return NULL; }
+
+PONT insere(PONT raiz, PONT no) {
+  if (raiz == NULL)
+    return no;
+  if (no->chave < raiz->chave)
+    raiz->esq = insere(raiz->esq, no);
+  else
+    raiz->dir = insere(raiz->dir, no);
+  return raiz;
+}
+
+PONT criaNo(int chave) {
+  PONT novoNo = (PONT)malloc(sizeof(No));
+  novoNo->esq = novoNo->dir = NULL;
+  novoNo->chave = chave;
+  return novoNo;
+}
+
+void imprimeIN(PONT raiz){
+    if(raiz->esq == NULL) printf("%d ", raiz->chave);
+    imprimeIN(raiz->esq);
+    printf("%d ", raiz->chave);
+    imprimeIN(raiz->dir);
+
+}
+int main(){
+    int i,n, q;
+    int num[q];
+    PONT r = inicializa();
+    PONT no, no2;
+    scanf("%d %d", &n, &q);
+    no = criaNo(n);
+    no2 = criaNo(q);
+    r  = insere(r, no);
+    r  = insere(r, no2);
+    imprimeIN(r);
+/*
+    scanf("%d", &n);
+    scanf("%d", &q);
+    for(i = 0;i < n; i++){
+        for(i = 0; i < q; i++){
+            scanf("%d", &num[i]);
+            no = criaNo(num[i]);
+            r  = insere(r, no);
+        }
+    }
+*/
+/*
+    for(i = 0; i < q; i++){
+        printf("%d ", num[i]);
+    }
+*/
+    //imprimePos(r);
+}

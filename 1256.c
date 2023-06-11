@@ -1,11 +1,13 @@
-
+/*Beecrowd 1256
+Miguel de Moura Oliveira
+*/
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Lista {
+typedef struct Lista{
   int num;
   struct Lista *prox;
-} Lista;
+}Lista;
 
 int indiceTabela(int x, int y) { return x % y; }
 

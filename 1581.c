@@ -1,3 +1,6 @@
+/*Miguel de Moura Oliveira
+159.327
+*/
 #include <stdio.h>
 #include <string.h>
 

@@ -1,3 +1,7 @@
+/*Miguel de Moura Oliveira
+RA: 159327
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -53,7 +57,7 @@ int main() {
 
     char linha[200];
     while (fgets(linha, sizeof(linha), stdin) != NULL) {
-        // Substituir caracteres especiais por espaços
+       
         for (int i = 0; linha[i]; i++) {
             if (!isalpha(linha[i]) && !isspace(linha[i])) {
                 linha[i] = ' ';
@@ -62,7 +66,7 @@ int main() {
 
         char* token = strtok(linha, " \t\n");
         while (token != NULL) {
-            // Remover espaços em branco
+            
             char* palavra = token;
             int tamanhoPalavra = strlen(palavra);
             int j = 0;
